@@ -5,7 +5,14 @@
 <beans>
 
     <!-- bean definitions here -->
-    <bean class="config.xml.beans.Student" id="Student1">
+    <bean class="config.xml.beans.Address" id="address1">
+        <property name="city" value="Munich"/>
+        <property name="state" value="Bayern"/>
+    </bean>
+    <bean class="config.xml.beans.Student" id="student1">
+        <property name="name" value="John Doe"/>
+        <property name="age" value="20"/>
+        <property name="address" ref="address1"></property>
     </bean>
 
 </beans>
